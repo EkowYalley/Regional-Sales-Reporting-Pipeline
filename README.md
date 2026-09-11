@@ -32,7 +32,7 @@ The included sample run completed successfully:
 - Automated pipeline checks passed: **8 of 8**
 - Unit tests passed: **4 of 4**
 
-The sample data are small and supplied for demonstration, so the project proves the workflow and validation logic rather than production scale.
+The supplied sample contains 48 transactions. The completed run demonstrates the full workflow, validation logic, and exact source-to-output reconciliation.
 
 ## Validation
 
@@ -88,12 +88,9 @@ On macOS or Linux, use `.venv/bin/python` instead of `.venv/Scripts/python`.
 - `revenue_by_region.png` shows total revenue by region.
 - `validation_report.json` provides auditable pass/fail checks and source-to-output totals.
 
-## Limitations
+## One limitation and the next build
 
-- The included dataset is a small demonstration sample, not a production sales system.
-- Revenue is calculated from the provided price and unit fields; discounts, returns, taxes, and shipping are not represented.
-- The pipeline runs as a batch process and does not include orchestration, incremental loading, or a database destination.
-- Region and customer attributes are treated as current values because no historical customer dimension is supplied.
+The current files do not include discounts, returns, taxes, shipping, or historical customer attributes. A production extension would add those fields alongside orchestration, incremental loading, and a database destination.
 
 Earlier exploratory materials remain recoverable in repository history; the current branch contains the validated portfolio pipeline.
 
